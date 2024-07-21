@@ -2,7 +2,8 @@ version: '2.4'
 
 services:
   gradle:
-    image: adoptopenjdk/openjdk8:jdk8u292-b10-slim
+    image: ad
+    image: adoptopenjdk/openjdk21:jdk21u292-b10-slim
     environment:
       - CI=${CI:-}
     volumes:
