@@ -12,10 +12,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4.1.7
 
       - name: Caches Gradle dependencies and wrappers
-        uses: actions/cache@v2
+        uses: actions/cache@v4.0.2
         with:
           path: |
             ~/.gradle/caches/modules-2
@@ -35,7 +35,7 @@ jobs:
           sudo rm -f ~/.gradle/caches/modules-2/gc.properties
 
       - name: Upload the built artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4.3.4
         with:
           name: ${{ steps.exec.outputs.jar }}
           path: build/libs/${{ steps.exec.outputs.jar }}

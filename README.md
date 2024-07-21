@@ -4,47 +4,39 @@
 [![](https://img.shields.io/github/downloads/fr1kin/ForgeHax/total)](https://github.com/fr1kin/ForgeHax/releases)
 [![](https://img.shields.io/matrix/forgehax:nerdsin.space.svg?label=%23forgehax%3Anerdsin.space&logo=matrix)](https://matrix.to/#/#forgehax:nerdsin.space)
 
-![Build Status](https://github.com/fr1kin/ForgeHax/actions/workflows/continuous_integration.yml/badge.svg?branch=1.16)
+[![buiawpkgew1/ForgeHax](https://gitee.com/awnioow/ForgeHax/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/awnioow/ForgeHax)
+![构建状态](https://github.com/fr1kin/ForgeHax/actions/workflows/continuous_integration.yml/badge.svg?branch=1.19.4)
 
-A Minecraft cheat that runs as a Forge mod.
+一个作为Forge模组运行在Minecraft上的作弊工具。
 
-## Installing
+## 安装
 
-1. Download the latest version of [Minecraft Forge](https://files.minecraftforge.net/) for the corresponding 
-ForgeHax Minecraft version (this is important if you want to run older versions of ForgeHax).
-2. Download the latest ForgeHax build by going to the [releases](https://github.com/fr1kin/ForgeHax/releases) section.
-Do NOT install the jar that contains `sources`. That one contains the source code and isn't compiled.
-3. Place the ForgeHax jar into the `.minecraft/mods/` directory. If you want to organize by Minecraft version, 
-you can place it under `.minecraft/mods/{mc.version}` where `mc.version` is 
-the version of Minecraft running (ex: `.minecraft/mods/1.12.2`). NOTE: This is will not work for 1.13+ version! You can
-only put the mod jar in the `/mods` folder!
-4. Launch Minecraft using the Forge profile. ForgeHax should now be loaded.
+1. 下载适用于相应ForgeHax Minecraft版本的最新版本的[Minecraft Forge](https://files.minecraftforge.net/)（如果你希望运行旧版本的ForgeHax，这是重要的）。
+2. 通过访问[发布页面](https://github.com/fr1kin/ForgeHax/releases)下载最新的ForgeHax构建版本。
+   不要安装包含`sources`的jar文件。那个jar文件包含源代码，并且没有编译。
+3. 将ForgeHax jar文件放入`.minecraft/mods/`目录中。如果你希望按Minecraft版本组织文件，可以将它放在`.minecraft/mods/{mc.version}`目录下，其中`mc.version`是正在运行的Minecraft版本（例如：`.minecraft/mods/1.12.2`）。注意：这不会对1.13+版本有效！你只能将模组jar文件放在`/mods`文件夹中！
+4. 使用Forge配置文件启动Minecraft。ForgeHax现在应该已经加载了。
 
 ## Wiki
 
-If you need any help, please check the [ForgeHax Wiki](https://github.com/fr1kin/ForgeHax/wiki) before submitting an issue.
+如果你需要任何帮助，请在提交问题之前查看[ForgeHax Wiki](https://github.com/fr1kin/ForgeHax/wiki)。
 
-## Building
-ForgeHax uses [Lombok](https://projectlombok.org/) to help eliminate boilerplate code and provide some useful features like
-extension methods. If you import ForgeHax into your IDE, make sure you install the [Lombok plugin](https://plugins.jetbrains.com/plugin/6317-lombok)
-for your IDE. Otherwise, a lot of code maybe marked as errors when it is actually fine.
+## 构建
+ForgeHax使用[Lombok](https://projectlombok.org/)来帮助消除样板代码并提供一些有用的功能，如扩展方法。如果你将ForgeHax导入到你的IDE中，请确保为你的IDE安装[Lombok插件](https://plugins.jetbrains.com/plugin/6317-lombok)。
+否则，很多代码可能会被标记为错误，但实际上是正确的。
 
-To build ForgeHax, you only need to run `./gradlew build`. Make sure gradle is run with JDK8. Newer versions of the JDK
-may not be supported by the javac plugin yet.
+要构建ForgeHax，你只需要运行`./gradlew build`。确保使用JDK8运行gradle。JDK的新版本可能尚未支持javac插件。
 
-#### Common build issues
+#### 常见的构建问题
 
-##### gradle build fails when IntelliJ IDEA is running / missing symbol error
+##### 当IntelliJ IDEA正在运行时，gradle构建失败/缺少符号错误
 
-Sometimes a fresh build will fail when IntelliJ IDEA is open. This is because the IDE has a file handle open on the javac
-plugin jar, and for some reason Lombok is unable to also read the jar at the same time. The result is that lombok will
-disable itself, which causes the entire build to fail with 'missing symbol' errors.
+有时，当IntelliJ IDEA打开时，新的构建可能会失败。这是因为IDE对javac插件jar有一个文件句柄打开，并且由于某种原因，Lombok无法同时读取jar文件。结果就是Lombok会禁用自己，导致整个构建失败，出现“缺少符号”错误。
 
-Fix: Close IntelliJ IDEA and run ./gradlew build from the terminal. The issue is probably just IntelliJ indexing a
-newly added jar. So once it's indexed, you can build with IntelliJ without any issues.
+修复：关闭IntelliJ IDEA，并在终端中运行`./gradlew build`。问题可能是IntelliJ正在索引新添加的jar。所以一旦索引完成，你就可以使用IntelliJ构建，而没有任何问题。
 
-## FAQ
+## 常见问题解答
 
-Read the FAQ on the [wiki](https://github.com/fr1kin/ForgeHax/wiki/FAQ)
+阅读[wiki](https://github.com/fr1kin/ForgeHax/wiki/FAQ)上的常见问题解答。
 
-###### Credit to Rain#4705 for the logo
+###### 感谢Rain#4705为Logo设计
