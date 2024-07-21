@@ -1,13 +1,13 @@
 [versions]
-minecraft = "1.16.5"
-forge = "1.16.5-36.2.2"
-lombok = "1.18.16"
-jupiter = "5.7.0"
-assertj = "3.18.1"
-groovy = "2.5.13"
-commons-io = "2.8.0"
-google-testing-compile = "0.19"
-ow2-asm = "5.2"
+minecraft = "1.19.4"
+forge = "1.19.4-45.0.47"
+lombok = "1.18.24"
+jupiter = "5.8.2"
+assertj = "3.22.0"
+groovy = "3.0.9"
+commons-io = "2.11.0"
+google-testing-compile = "0.21"
+ow2-asm = "9.2"
 
 [libraries]
 minecraftforge = { group = "net.minecraftforge", name = "forge", version.ref = "forge" }
@@ -25,5 +25,5 @@ ow2asm = { group = "org.ow2.asm", name = "asm-debug-all", version.ref = "ow2-asm
 jupiter = ["jupiterapi", "jupiterparams", "jupiterengine"]
 
 [plugins]
-forgegradle = { id = "net.minecraftforge.gradle", version = "5.1.+" }
+forgegradle = { id = "net.minecraftforge.gradle", version = '[6.0,6.2)' }
 gitgradle = { id = "com.palantir.git-version", version = "0.12.3" }

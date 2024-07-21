@@ -19,7 +19,7 @@ archivesBaseName = "ForgeHax_${minecraftVersion}"
 final isCiBuilding = System.getenv().get('CI') == 'true'
 
 if (isCiBuilding) {
-  logger.warn 'CI build. Certain modules will be omitted from this build'
+  logger.warn 'CI构建。某些模块将从此构建中省略'
 }
 
 java {
@@ -118,9 +118,9 @@ def getContributors(String apiUrl) {
     final json = new groovy.json.JsonSlurper().parseText(url.text)
     return String.join(', ', json.collect { it.login })
   } catch (Throwable t) {
-    logger.warn("Failed to get contributors from GitHub API! Defaulting to hardcoded users...")
+    logger.warn("从GitHub API获取贡献者失败！默认使用硬编码的用户...")
     logger.debug(t.getMessage(), t)
-    return 'fr1kin, BabbaJ, 0x22'
+    return 'lroj, fr1kin, BabbaJ, 0x22'
   }
 }
 
@@ -132,12 +132,12 @@ processResources {
     it.filter org.apache.tools.ant.filters.ReplaceTokens, tokens: [
         'forgehax.version'      : project.version as String,
         'forgehax.forge.version': getForgeMajorVersion(forgeVersion), // only extract major version
-        'forgehax.issue.tracker': 'https://github.com/fr1kin/ForgeHax/issues',
+        'forgehax.issue.tracker': 'https://github.com/buiawpkgew1/ForgeHax/issues',
         'forgehax.update.url'   : 'TODO',
         'forgehax.url'          : 'fiki.dev',
         'forgehax.logo.file'    : 'logo.png',
         'forgehax.credits'      : 'Rain#4705 for the logo',
-        'forgehax.authors'      : getContributors('https://api.github.com/repos/fr1kin/ForgeHax/contributors'),
+        'forgehax.authors'      : getContributors('https://api.github.com/repos/buiawpkgew1/ForgeHax/contributors'),
         'forgehax.description'  : 'Hax 4 Forge'
     ]
   }
