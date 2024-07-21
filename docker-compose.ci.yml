@@ -2,7 +2,7 @@ version: '2.4'
 
 services:
   gradle:
-    image: adoptopenjdk/openjdk21:jdk21-b09-slim
+    image: openjdk:21-jdk
     environment:
       - CI=${CI:-}
     volumes:
