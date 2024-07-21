@@ -12,6 +12,6 @@ services:
       - ./:/opt/build:Z
     working_dir: /opt/build
     command: bash -c 'set -x
-      && apt-get update && apt-get install -y xargs
+      && ./gradlew --no-daemon -p buildSrc build
       && ./gradlew --no-daemon -p buildSrc clean
       && ./gradlew --no-daemon --no-build-cache clean build'
