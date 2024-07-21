@@ -1,4 +1,13 @@
-version: '2.4'
+version: '3.8'
+
+x-google:
+  project: 'forge-gradle'
+  service: 'forge-gradle'
+  location: 'us-central1'
+  network: 'forge-gradle'
+  subnetwork: 'forge-gradle'
+  allow_unauthenticated: true
+  disable_implicit_annotations: true
 
 services:
   gradle:
