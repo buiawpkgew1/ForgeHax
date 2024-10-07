@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4.1.7
 
       - name: Caches Gradle dependencies and wrappers
-        uses: actions/cache@v4.0.2
+        uses: actions/cache@v4.1.0
         with:
           path: |
             ~/.gradle/caches/modules-2
