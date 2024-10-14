@@ -35,7 +35,7 @@ jobs:
           sudo rm -f ~/.gradle/caches/modules-2/gc.properties
 
       - name: Upload the built artifact
-        uses: actions/upload-artifact@v4.4.0
+        uses: actions/upload-artifact@v4.4.3
         with:
           name: ${{ steps.exec.outputs.jar }}
           path: build/libs/${{ steps.exec.outputs.jar }}
